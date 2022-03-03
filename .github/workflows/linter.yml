@@ -1,4 +1,4 @@
-name: Lint Code Base
+name: Lint Code
 
 on:
   push:
@@ -8,7 +8,7 @@ on:
 
 jobs:
   build:
-    name: Lint Code Base
+    name: Lint Code
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
@@ -16,9 +16,11 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Lint Code Base
-        uses: github/super-linter@v4
-        env:
-          VALIDATE_ALL_CODEBASE: false
-          DEFAULT_BRANCH: main
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Install requirements
+        run: pip install -r requirements/lint.txt
+
+      - name: LCheck with black
+        run: black --check .
+
+      - name: Check with isort
+        run: isort --check-only .
