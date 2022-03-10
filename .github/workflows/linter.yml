@@ -23,4 +23,4 @@ jobs:
         run: black --check .
 
       - name: Check with isort
-        run: isort --check-only --settings-file ./pyproject.toml .
+        run: isort --check-only --settings-path ./pyproject.toml .
