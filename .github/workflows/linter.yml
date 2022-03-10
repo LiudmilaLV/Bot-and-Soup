@@ -23,6 +23,4 @@ jobs:
         run: black --check .
 
       - name: Check with isort
-        run: isort --check-only .
-        with:
-            requirementsFiles: "requirements/lint.txt"
+        run: isort --check-only --settings-file ./pyproject.toml .
