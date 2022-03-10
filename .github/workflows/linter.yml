@@ -24,3 +24,5 @@ jobs:
 
       - name: Check with isort
         run: isort --check-only .
+        with:
+            requirementsFiles: "requirements/lint.txt"
