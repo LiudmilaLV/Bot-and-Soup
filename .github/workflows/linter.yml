@@ -28,4 +28,4 @@ jobs:
         run: black --check .
 
       - name: Check with isort
-        run: isort -c .
+        run: isort --check-only .

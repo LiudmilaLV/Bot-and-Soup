@@ -2,7 +2,10 @@ import requests
 from bs4 import BeautifulSoup
 from telegram.ext import *
 
-from constants import API_KEY
+API_KEY = ""
+with open("constants.txt") as file:
+    for line in file:
+        API_KEY = line.strip()
 
 # Prompting a key word
 print("Hi! \nI'm going to scrape an event section of irk.ru looking for your key word.")
