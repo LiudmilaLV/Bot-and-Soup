@@ -1,6 +1,6 @@
 env
 .DS_Store
-constants.txt
+settings.json
 
 __pycache__
 *.py[cod]

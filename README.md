@@ -1,3 +1,4 @@
 # Bot-and-Soup
-Scrapes a city event page of one of the local web-media looking for the articles mentioning my key word and send me notification with the event link via Telegram bot.
+Scrapes a city event page of one of the local web-media looking for the articles mentioning my key word and send me notification with the event link via Telegram bot, scheduled with cron.
+
 ## [![Lint Code](https://github.com/LiudmilaLV/Bot-and-Soup/actions/workflows/linter.yml/badge.svg)](https://github.com/LiudmilaLV/Bot-and-Soup/actions/workflows/linter.yml)
